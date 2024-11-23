@@ -6,6 +6,7 @@ import { selected } from "../../components/data";
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
 import Link from "next/link";
+import CustomCursor from "@/components/CustomCursor";
 export default function Selected() {
   const containerRef = useRef(null);
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -149,6 +150,7 @@ export default function Selected() {
 
   return (
     <Inner backgroundColor={"#B0AD98"}>
+      <CustomCursor hovered={false} />
       <div className="flex flex-col">
         <div
           style={{ zIndex: 9999, fontSize: "0.8rem" }}

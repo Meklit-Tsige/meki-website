@@ -34,12 +34,12 @@ export default function CustomCursor({ hovered }) {
         style={{
           left: smoothMouse.x,
           top: smoothMouse.y,
-          zIndex: 1,
+          zIndex: 11000,
           width: hovered ? cursorSize * 2 : cursorSize,
           height: hovered ? cursorSize * 2 : cursorSize,
           transition: "width 0.5s ease, height 0.5s ease", // Adjust the duration as needed
         }}
-        className={`fixed bg-white mix-blend-difference rounded-full pointer-events-none`}
+        className={`fixed bg-white mix-blend-difference hidden md:block rounded-full pointer-events-none`}
       ></motion.div>
     </div>
   );

@@ -6,6 +6,7 @@ import { useRef, useState } from "react";
 import Inner from "../../components/Layout/Inner";
 import Footer from "@/components/Footer";
 import ImageMouseGallery from "@/components/ImageGalleryMouse/ImageMouseGallery";
+import CustomCursor from "@/components/CustomCursor";
 export default function About() {
   gsap.registerPlugin(useGSAP);
 
@@ -96,6 +97,7 @@ export default function About() {
 
   return (
     <Inner backgroundColor={"#B0AD98"}>
+      <CustomCursor hovered={false} />
       <Footer />
       {/* <ImageMouseGallery>
         <div
@@ -183,7 +185,7 @@ export default function About() {
             <div className="overflow-hidden flex justify-end">
               <div className="invisible" ref={addToRightMostHeaderRevealRefs}>
                 <a
-                  href={"https://www.vogue.com/photovogue/photographers/356363"}
+                  href={"https://www.instagram.com/meklit.fekadu/"}
                   target="_blank"
                   className="headerLink"
                 >

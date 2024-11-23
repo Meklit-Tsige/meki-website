@@ -67,6 +67,7 @@ export default function Home() {
           delay: 1.7,
           duration: 1.3,
           yPercent: -150,
+          opacity: 0,
           ease: "power3.inOut",
         },
         "<"
@@ -125,7 +126,7 @@ export default function Home() {
           {
             visibility: "visible",
           },
-          "-=1.3"
+          "-=1.7"
         )
         .to(
           revealRefs.current,
@@ -144,8 +145,6 @@ export default function Home() {
     master.add(setInitialStates).add(preloaderAnimation()).play();
   }, []);
 
-  
-
   const [openDetails, setOpenDetails] = useState(false);
   const [focusedProject, setFocusedProject] = useState(null);
   const [hoveredIndex, setHoveredIndex] = useState(null);
@@ -153,7 +152,7 @@ export default function Home() {
 
   return (
     <Inner backgroundColor={"#B0AD98"}>
-      <CustomCursor hovered={hovered} />
+      {/* <CustomCursor hovered={hovered} /> */}
       {openDetails && (
         <ProjectDetails
           project={focusedProject}
@@ -161,90 +160,102 @@ export default function Home() {
           openDetails={openDetails}
         />
       )}
-      <div
-        style={{ zIndex: 9999, fontSize: "0.8rem" }}
-        className="px-5 py-3 flex font-medium items-center uppercase w-full"
-      >
-        <div className="w-6/12 flex overflow-hidden">
-          <div className="invisible" ref={addToRevealRefs}>
-            <Link href={"/"} className={`text-nowrap`}>
-              MEKLIT FEKADU
-            </Link>
-          </div>
-        </div>
-        <div className="w-6/12 flex justify-between overflow-hidden">
-          <div className="invisible" ref={addToRevealRefs}>
-            <Link href={"/"} className={`underline hidden md:block`}>
-              Overview
-            </Link>
-          </div>
-          <div className="invisible" ref={addToRevealRefs}>
-            <Link href={"/selected"} className={`headerLink`}>
-              Selected
-            </Link>
-          </div>
-          <div className="invisible" ref={addToRevealRefs}>
-            <Link href={"/about"} className={`headerLink `}>
-              About
-            </Link>
-          </div>
-        </div>
-      </div>
-
-      <div className="mb-44">
-        {!hasPageLoaded && (
-          <div
-            ref={counterRef}
-            className="fixed top-0 pl-1 w-full flex uppercase text-7xl"
-          >
-            <div className="w-8/12">
-              <Counter />
-            </div>
-            <div className="w-4/12">100</div>
-          </div>
-        )}
-
-        {/* PageContent */}
+      <div className="flex flex-col">
         <div
-          ref={contentRef}
-          // ${
-          //   hasPageLoaded ? "mt-36" : "mt-24"
-          // }
-          className={`flex flex-col gap-16 px-5 mt-24`}
+          style={{ zIndex: 9999, fontSize: "0.8rem" }}
+          className="px-5 py-3 flex font-medium items-center uppercase w-full"
         >
-          <div className="flex w-full flex-wrap gap-x-2 gap-y-8 sm:gap-x-4 sm:gap-y-12 justify-between">
-            {ALLprojects.map((project, index) => (
-              <div
-                key={index}
-                ref={addToImageRefs}
-                onClick={() => {
-                  const matchingProject = findProjectByImage(project);
-                  setFocusedProject(matchingProject);
-                  setOpenDetails(true);
-                }}
-                onMouseEnter={() => setHovered(true)}
-                onMouseLeave={() => setHovered(false)}
-                // onMouseEnter={() => setHoveredIndex(index)} // Set hovered image
-                // onMouseLeave={() => setHoveredIndex(null)} // Reset on hover leave
-                className="w-3/12 sm:w-1/12 cursor-pointer invisible max-w-20 max-h-24 overflow-hidden relative"
-              >
-                <Image
-                  style={{
-                    opacity: hoveredIndex === index ? 0.5 : 1,
-                    transition: "opacity 1s cubic-bezier(0.16, 1, 0.3, 1)",
-                  }}
-                  // ${
-                  //   hoveredIndex !== null && hoveredIndex !== index
-                  //     ? "opacity-30"
-                  //     : ""
-                  // }
-                  src={project}
-                  height={700}
-                  width={500}
-                  alt={project}
-                />
+          <div className="w-6/12 flex overflow-hidden">
+            <div className="invisible" ref={addToRevealRefs}>
+              <Link href={"/"} className={`text-nowrap`}>
+                MEKLIT FEKADU
+              </Link>
+            </div>
+          </div>
+          <div className="w-6/12 flex justify-between overflow-hidden">
+            <div className="invisible" ref={addToRevealRefs}>
+              <Link href={"/"} className={`underline hidden md:block`}>
+                Overview
+              </Link>
+            </div>
+            <div className="invisible" ref={addToRevealRefs}>
+              <Link href={"/selected"} className={`headerLink`}>
+                Selected
+              </Link>
+            </div>
+            <div className="invisible" ref={addToRevealRefs}>
+              <Link href={"/about"} className={`headerLink `}>
+                About
+              </Link>
+            </div>
+          </div>
+        </div>
+
+        <div className="mb-44">
+          {!hasPageLoaded && (
+            <div
+              ref={counterRef}
+              className="fixed top-0 pl-1 w-full flex uppercase text-7xl"
+            >
+              <div className="w-8/12">
+                <Counter />
               </div>
-            ))}
+              <div className="w-4/12">100</div>
+            </div>
+          )}
+
+          {/* PageContent */}
+          <div
+            ref={contentRef}
+            // ${
+            //   hasPageLoaded ? "mt-36" : "mt-24"
+            // }
+            className={`flex flex-col gap-16 px-5 pt-8 md:pt-16`}
+          >
+            <div className="flex w-full flex-wrap gap-x-2 gap-y-8 sm:gap-x-4 sm:gap-y-12 justify-between">
+              {ALLprojects.map((project, index) => (
+                <div
+                  key={index}
+                  ref={addToImageRefs}
+                  onClick={() => {
+                    console.log(project);
+                    const updatedProject = project
+                      .replace(/^\/[^/]+\//, "")
+                      .replace(/\.jpg$/, ".webp");
+                    console.log(updatedProject);
+
+                    const matchingProject = findProjectByImage(project);
+                    setFocusedProject(matchingProject);
+                    setOpenDetails(true);
+                  }}
+                  onMouseEnter={() => {
+                    setHovered(true);
+                    setHoveredIndex(index);
+                  }}
+                  onMouseLeave={() => {
+                    setHovered(false);
+                    setHoveredIndex(null);
+                  }}
+                  className="w-3/12 sm:w-1/12 cursor-pointer invisible max-w-20 max-h-24 overflow-hidden relative"
+                >
+                  <Image
+                    style={{
+                      opacity: hoveredIndex === index ? 0.5 : 1,
+                      transition: "opacity 1s cubic-bezier(0.16, 1, 0.3, 1)",
+                    }}
+                    // ${
+                    //   hoveredIndex !== null && hoveredIndex !== index
+                    //     ? "opacity-30"
+                    //     : ""
+                    // }
+                    src={project}
+                    height={700}
+                    width={500}
+                    alt={project}
+                  />
+                </div>
+              ))}
+            </div>
           </div>
         </div>
       </div>
