@@ -13,7 +13,11 @@ import CustomCursor from "@/components/CustomCursor";
 export let hasPageLoaded = false;
 
 function findProjectByImage(src) {
-  return projects.find((project) => project.images.includes(src)) || null;
+  return (
+    projects.find((project) =>
+      project.images.some((image) => image.split("/").pop() === src)
+    ) || null
+  );
 }
 
 export default function Home() {
@@ -152,7 +156,7 @@ export default function Home() {
 
   return (
     <Inner backgroundColor={"#B0AD98"}>
-      {/* <CustomCursor hovered={hovered} /> */}
+      <CustomCursor hovered={hovered} />
       {openDetails && (
         <ProjectDetails
           project={focusedProject}
@@ -218,13 +222,11 @@ export default function Home() {
                   key={index}
                   ref={addToImageRefs}
                   onClick={() => {
-                    console.log(project);
                     const updatedProject = project
                       .replace(/^\/[^/]+\//, "")
                       .replace(/\.jpg$/, ".webp");
-                    console.log(updatedProject);
 
-                    const matchingProject = findProjectByImage(project);
+                    const matchingProject = findProjectByImage(updatedProject);
                     setFocusedProject(matchingProject);
                     setOpenDetails(true);
                   }}
