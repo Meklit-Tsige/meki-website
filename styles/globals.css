@@ -1,0 +1,94 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  color: white;
+  background-color: black;
+}
+
+div::selection {
+  background-color: white;
+  color: black;
+}
+
+a::selection {
+  background-color: white;
+  color: black;
+}
+
+.arrowCursorRight {
+  cursor: e-resize;
+}
+
+.arrowCursorLeft {
+  cursor: w-resize;
+}
+
+/* Hide scrollbar for Chrome, Safari, and Edge */
+.noScrollBar {
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+}
+.noScrollBar::-webkit-scrollbar {
+  display: none; /* Chrome, Safari, and Edge */
+}
+
+.borderr {
+  border: 1px solid red;
+}
+
+.imageContainer {
+  visibility: hidden;
+}
+
+#carousel {
+  display: flex;
+  overflow-x: auto;
+  -ms-overflow-style: none; /* Hide the scrollbar for MS Edge */
+  scrollbar-width: none; /* Hide the scrollbar for Mozilla Firefox */
+
+  margin: 0 auto 0 auto;
+  width: 90vw;
+  height: fit-content;
+
+  border: solid #f3e6ff 0.5px;
+}
+
+#carousel::-webkit-scrollbar {
+  display: none; /* Hide the scrollbar on Webkit based browsers (Chrome, Safari, etc) */
+  -webkit-overflow-scrolling: touch; /* On touch screens the content continues to scroll for a while after finishing the scroll gesture */
+}
+
+.headerLink {
+  cursor: pointer;
+  position: relative;
+  text-decoration: none;
+  /* font-size: 0.65rem;
+  line-height: 1rem; */
+  /* font-weight: 300; */
+}
+
+.headerLink::after {
+  content: "";
+  height: 1px;
+  background: white;
+  left: 0;
+  bottom: 0px; /* Adjust this value to move the line closer to the text */
+  width: 100%; /* Start with full width */
+  position: absolute;
+  transform: scaleX(0); /* Initially scale the width to 0 */
+  transform-origin: left; /* The animation starts from the left */
+  transition: transform 0.5s ease-out;
+}
+
+.headerLink:hover::after {
+  transform: scaleX(1); /* Scale to full width on hover */
+  transform-origin: left; /* Ensure the line grows from left to right */
+}
+.headerLink::after {
+  transform: scaleX(
+    0
+  ); /* Scale back to 0, but the transform-origin changes to right */
+  transform-origin: right;
+}
