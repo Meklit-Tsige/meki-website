@@ -192,12 +192,12 @@ export default function Home() {
                 Overview
               </Link>
             </div>
-            <div className="invisible" ref={addToRevealRefs}>
+            <div className="invisible" tabindex="0" ref={addToRevealRefs}>
               <Link href={"/selected"} className={`headerLink`}>
                 Selected
               </Link>
             </div>
-            <div className="invisible" ref={addToRevealRefs}>
+            <div className="invisible" tabindex="0" ref={addToRevealRefs}>
               <Link href={"/about"} className={`headerLink `}>
                 About
               </Link>
