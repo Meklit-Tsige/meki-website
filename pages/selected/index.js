@@ -55,10 +55,10 @@ export default function Selected() {
     gsap.set(revealRefs.current, {
       yPercent: 100,
     });
-    // gsap.set(imageRefs.current, {
-    //   yPercent: 250,
-    //   opacity: 0,
-    // });
+    gsap.set(imageRefs.current, {
+      yPercent: 250,
+      opacity: 0,
+    });
     gsap.set(bottomImageRef.current, {
       yPercent: 105,
     });
@@ -69,29 +69,29 @@ export default function Selected() {
       defaults: {},
     });
 
-    // tl.to(imageRefs.current, {
-    //   visibility: "visible",
-    // })
-    //   .to(
-    //     imageRefs.current,
-    //     {
-    //       yPercent: 0,
-    //       opacity: 1,
-    //       duration: 1,
-    //       stagger: 0.02,
-    //       ease: "power3.out",
-    //     },
-    //     "<"
-    //   )
-    tl.to(
-      bottomImageRef.current,
-      {
-        yPercent: 0,
-        duration: 1.6,
-        ease: "power4.out",
-      },
-      "<"
-    )
+    tl.to(imageRefs.current, {
+      visibility: "visible",
+    })
+      .to(
+        imageRefs.current,
+        {
+          yPercent: 0,
+          opacity: 1,
+          duration: 1,
+          stagger: 0.02,
+          ease: "power3.out",
+        },
+        "<"
+      )
+      .to(
+        bottomImageRef.current,
+        {
+          yPercent: 0,
+          duration: 1.6,
+          ease: "power4.out",
+        },
+        "<"
+      )
       .to(
         imageMaskRef.current,
         {
@@ -203,20 +203,20 @@ export default function Selected() {
         </div>
 
         <motion.div
-          variants={containerVariants}
-          initial="initial"
-          animate="animate"
+          // variants={containerVariants}
+          // initial="initial"
+          // animate="animate"
           ref={containerRef}
           className="noScrollBar w-full fixed h-[100vh] top-0 bottom-0 pt-[calc(100vh-80px)] pl-5 flex gap-2 overflow-x-auto overflow-y-hidden z-50 pr-[calc(100vw-48px)]"
         >
           {[...selectedMini].map((image, index) => (
             <motion.div
               key={index}
-              variants={imageVariants}
+              // variants={imageVariants}
               data-index={index}
-              // ref={addToImageRefs}
+              ref={addToImageRefs}
               // invisible
-              className="relative max-h-16 min-w-12 image-slide"
+              className="invisible relative max-h-16 min-w-12 image-slide"
             >
               <Image
                 src={image}
