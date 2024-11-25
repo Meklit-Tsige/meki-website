@@ -1,3 +1,4 @@
+"use client";
 import { useRef, useEffect, useState } from "react";
 import Image from "next/image";
 import { motion } from "framer-motion";
@@ -7,9 +8,13 @@ import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
 import Link from "next/link";
 import CustomCursor from "@/components/CustomCursor";
+import { useWindowSize } from "@uidotdev/usehooks";
 export default function Selected() {
   const containerRef = useRef(null);
   const [currentIndex, setCurrentIndex] = useState(0);
+  const size = useWindowSize().width;
+
+  console.log(size);
 
   useEffect(() => {
     if (!containerRef.current) return;
@@ -55,13 +60,19 @@ export default function Selected() {
     gsap.set(revealRefs.current, {
       yPercent: 100,
     });
-    gsap.set(imageRefs.current, {
-      yPercent: 250,
-      opacity: 0,
-    });
     gsap.set(bottomImageRef.current, {
       yPercent: 105,
     });
+    if (size < 768) {
+      gsap.set(imageRefs.current, {
+        opacity: 0,
+      });
+    } else {
+      gsap.set(imageRefs.current, {
+        yPercent: 250,
+        opacity: 0,
+      });
+    }
   };
 
   const preloaderAnimation = () => {
@@ -69,55 +80,107 @@ export default function Selected() {
       defaults: {},
     });
 
-    tl.to(imageRefs.current, {
-      visibility: "visible",
-    })
-      .to(
-        imageRefs.current,
-        {
-          yPercent: 0,
-          opacity: 1,
-          duration: 1,
-          stagger: 0.02,
-          ease: "power3.out",
-        },
-        "<"
-      )
-      .to(
-        bottomImageRef.current,
-        {
-          yPercent: 0,
-          duration: 1.6,
-          ease: "power4.out",
-        },
-        "<"
-      )
-      .to(
-        imageMaskRef.current,
-        {
-          scaleY: 0,
-          duration: 1.3,
-          ease: "power4.out",
-        },
-        "<0.2"
-      )
-      .to(
-        revealRefs.current,
-        {
-          visibility: "visible",
-        },
-        "-=1.3"
-      )
-      .to(
-        revealRefs.current,
-        {
-          yPercent: 0,
-          duration: 1,
-          stagger: 0.05,
-          ease: "power2.out",
-        },
-        "<"
-      );
+    if (size < 768) {
+      tl.to(imageRefs.current, {
+        visibility: "visible",
+      })
+        .to(
+          imageRefs.current,
+          {
+            // yPercent: 0,
+            opacity: 1,
+            duration: 1,
+            stagger: 0.07,
+            ease: "power3.out",
+          },
+          "<"
+        )
+        .to(
+          bottomImageRef.current,
+          {
+            yPercent: 0,
+            duration: 1.6,
+            ease: "power4.out",
+          },
+          "<"
+        )
+        .to(
+          imageMaskRef.current,
+          {
+            scaleY: 0,
+            duration: 1.3,
+            ease: "power4.out",
+          },
+          "<0.2"
+        )
+        .to(
+          revealRefs.current,
+          {
+            visibility: "visible",
+          },
+          "-=2"
+        )
+        .to(
+          revealRefs.current,
+          {
+            yPercent: 0,
+            duration: 1,
+            stagger: 0.05,
+            ease: "power2.out",
+          },
+          "<"
+        );
+    } else {
+      tl.to(imageRefs.current, {
+        visibility: "visible",
+      })
+        .to(
+          imageRefs.current,
+          {
+            yPercent: 0,
+            opacity: 1,
+            duration: 1,
+            stagger: 0.02,
+            ease: "power3.out",
+          },
+          "<"
+        )
+        .to(
+          bottomImageRef.current,
+          {
+            yPercent: 0,
+            duration: 1.6,
+            ease: "power4.out",
+          },
+          "<"
+        )
+        .to(
+          imageMaskRef.current,
+          {
+            scaleY: 0,
+            duration: 1.3,
+            ease: "power4.out",
+          },
+          "<0.2"
+        )
+        .to(
+          revealRefs.current,
+          {
+            visibility: "visible",
+          },
+          "-=1.3"
+        )
+        .to(
+          revealRefs.current,
+          {
+            yPercent: 0,
+            duration: 1,
+            stagger: 0.05,
+            ease: "power2.out",
+          },
+          "<"
+        );
+    }
   };
 
   const imageVariants = {
