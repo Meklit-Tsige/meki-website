@@ -12,9 +12,7 @@ import { useWindowSize } from "@uidotdev/usehooks";
 export default function Selected() {
   const containerRef = useRef(null);
   const [currentIndex, setCurrentIndex] = useState(0);
-  const size = useWindowSize().width;
-
-  console.log(size);
+  const size = useWindowSize();
 
   useEffect(() => {
     if (!containerRef.current) return;
@@ -60,17 +58,22 @@ export default function Selected() {
     gsap.set(revealRefs.current, {
       yPercent: 100,
     });
-    gsap.set(bottomImageRef.current, {
-      yPercent: 105,
-    });
-    if (size < 768) {
+    
+
+    if (size.width < 768) {
       gsap.set(imageRefs.current, {
+        opacity: 0,
+      });
+      gsap.set(bottomImageRef.current, {
         opacity: 0,
       });
     } else {
       gsap.set(imageRefs.current, {
         yPercent: 250,
         opacity: 0,
+      });
+      gsap.set(bottomImageRef.current, {
+        yPercent: 100,
       });
     }
   };
@@ -80,7 +83,7 @@ export default function Selected() {
       defaults: {},
     });
 
-    if (size < 768) {
+    if (size.width < 768) {
       tl.to(imageRefs.current, {
         visibility: "visible",
       })
@@ -98,27 +101,25 @@ export default function Selected() {
         .to(
           bottomImageRef.current,
           {
-            yPercent: 0,
-            duration: 1.6,
-            ease: "power4.out",
+            visibility: "visible",
           },
           "<"
         )
         .to(
-          imageMaskRef.current,
+          bottomImageRef.current,
           {
-            scaleY: 0,
-            duration: 1.3,
-            ease: "power4.out",
+            opacity: 1,
+            duration: 2,
+            ease: "power3.out",
           },
-          "<0.2"
+          "<"
         )
         .to(
           revealRefs.current,
           {
             visibility: "visible",
           },
-          "-=2"
+          "<"
         )
         .to(
           revealRefs.current,
@@ -145,10 +146,14 @@ export default function Selected() {
           },
           "<"
         )
+        .to(bottomImageRef.current, {
+          visibility: "visible",
+        })
         .to(
           bottomImageRef.current,
           {
             yPercent: 0,
+            // opacity: 1,
             duration: 1.6,
             ease: "power4.out",
           },
@@ -246,13 +251,13 @@ export default function Selected() {
         </div>
 
         <div className="flex w-full mb-6 mt-12">
-          <div
+          {/* <div
             ref={imageMaskRef}
             style={{ zIndex: 10 }}
-            className="w-full h-full absolute origin-top bg-black"
-          ></div>
+            className="w-full h-full hidden md:block absolute origin-top bg-black"
+          ></div> */}
           <div
-            className="w-[90vw] ml-5 overflow-hidden md:w-[45vw] max-h-[65vh] md:max-h-[70vh]"
+            className="w-[90vw] ml-5 invisible overflow-hidden md:w-[45vw] max-h-[65vh] md:max-h-[70vh]"
             ref={bottomImageRef}
           >
             <Image
@@ -271,7 +276,7 @@ export default function Selected() {
           // animate="animate"
           style={{ zIndex: 15 }}
           ref={containerRef}
-          className="noScrollBar w-full fixed h-[100svh] top-0 bottom-0 pt-[calc(100svh-80px)] pl-5 flex gap-2 overflow-x-auto overflow-y-hidden z-50 pr-[calc(100vw-48px)]"
+          className="noScrollBar w-full fixed h-[100vh] top-0 bottom-0 pt-[calc(100svh-80px)] pl-5 flex gap-2 overflow-x-auto overflow-y-hidden z-50 pr-[calc(100vw-48px)]"
         >
           {[...selectedMini].map((image, index) => (
             <motion.div
