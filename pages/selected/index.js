@@ -189,7 +189,7 @@ export default function Selected() {
             className="w-full h-full absolute origin-top bg-black"
           ></div>
           <div
-            className="w-[90vw] ml-5 overflow-hidden md:w-[45vw] max-h-[70vh]"
+            className="w-[90vw] ml-5 overflow-hidden md:w-[45vw] max-h-[65vh] md:max-h-[70vh]"
             ref={bottomImageRef}
           >
             <Image
