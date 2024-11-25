@@ -206,8 +206,9 @@ export default function Selected() {
           // variants={containerVariants}
           // initial="initial"
           // animate="animate"
+          style={{ zIndex: 15 }}
           ref={containerRef}
-          className="noScrollBar w-full fixed h-[100svh] top-0 bottom-0 pt-[calc(100vh-80px)] pl-5 flex gap-2 overflow-x-auto overflow-y-hidden z-50 pr-[calc(100vw-48px)]"
+          className="noScrollBar w-full fixed h-[100svh] top-0 bottom-0 pt-[calc(100svh-80px)] pl-5 flex gap-2 overflow-x-auto overflow-y-hidden z-50 pr-[calc(100vw-48px)]"
         >
           {[...selectedMini].map((image, index) => (
             <motion.div
