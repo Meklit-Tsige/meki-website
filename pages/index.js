@@ -154,6 +154,16 @@ export default function Home() {
   const [hoveredIndex, setHoveredIndex] = useState(null);
   const [hovered, setHovered] = useState(false);
 
+  // // TODO: this doesnt seem to work yet
+  // useEffect(() => {
+  //   if (openDetails) {
+  //     console.log("stop scroll");
+  //     document.body.style.overflow = "hidden";
+  //   } else {
+  //     document.body.style.overflow = "unset";
+  //   }
+  // }, [openDetails]);
+
   return (
     <Inner backgroundColor={"#B0AD98"}>
       <CustomCursor hovered={hovered} />

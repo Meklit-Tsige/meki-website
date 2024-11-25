@@ -172,7 +172,7 @@ export default function About() {
             <div className="invisible" ref={addToHeaderRevealRefs}>
               <a
                 href="mailto:meklit-tsige@outlook.de"
-                className="text-base"
+                className="md:text-base"
                 ref={addToHeaderRevealRefs}
               >
                 meklit-tsige@outlook.de

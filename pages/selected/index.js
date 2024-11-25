@@ -2,7 +2,7 @@ import { useRef, useEffect, useState } from "react";
 import Image from "next/image";
 import { motion } from "framer-motion";
 import Inner from "../../components/Layout/Inner";
-import { selected } from "../../components/data";
+import { selected, selectedMini } from "../../components/data";
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
 import Link from "next/link";
@@ -189,7 +189,7 @@ export default function Selected() {
             className="w-full h-full absolute origin-top bg-black"
           ></div>
           <div
-            className="w-[80vw] ml-5 overflow-hidden md:w-[45vw] max-h-[70vh]"
+            className="w-[90vw] ml-5 overflow-hidden md:w-[45vw] max-h-[70vh]"
             ref={bottomImageRef}
           >
             <Image
@@ -209,7 +209,7 @@ export default function Selected() {
           ref={containerRef}
           className="noScrollBar w-full fixed h-[100vh] top-0 bottom-0 pt-[calc(100vh-80px)] pl-5 flex gap-2 overflow-x-auto overflow-y-hidden z-50 pr-[calc(100vw-48px)]"
         >
-          {[...selected].map((image, index) => (
+          {[...selectedMini].map((image, index) => (
             <motion.div
               key={index}
               variants={imageVariants}

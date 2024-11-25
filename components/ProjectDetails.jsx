@@ -42,14 +42,6 @@ export default function ProjectDetails({
   openDetails,
 }) {
   // to prevent body from scrolling when a modal is open
-  useEffect(() => {
-    if (openDetails) {
-      console.log("stop scroll");
-      document.body.style.overflow = "hidden";
-    } else {
-      document.body.style.overflow = "unset";
-    }
-  }, [openDetails]);
 
   const revealRefs = useRef([]);
   const imageRefs = useRef([]);

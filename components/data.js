@@ -30,6 +30,38 @@ export const selected = [
   "/Telekom/_IMG_3132-2.webp",
 ];
 
+export const selectedMini = [
+  "/resized_images/A1_Livingroom.jpg",
+  "/resized_images/BF_Instagram__0027_IMG_4325_V1.jpg",
+  "/resized_images/IMG_8701.jpg",
+  "/resized_images/IMG_6711.jpg",
+  "/resized_images/IMG_8021-3.jpg",
+  "/resized_images/IMG_7779.jpg",
+  "/resized_images/PXL_20240918_075506440.RAW-01.COVER~8.jpg",
+  "/resized_images/IMG_5195.jpg",
+  "/resized_images/IMG_3080.jpg",
+  "/resized_images/CA4602A7.jpg",
+  "/resized_images/IMG_2525_.jpg",
+  "/resized_images/IMG_9161-Kopie.jpg",
+  "/resized_images/_DSC3556.jpg",
+  "/resized_images/IMG_2192__.jpg",
+  "/resized_images/CEC09210-5FB3-43E4-975F-CF103FB0862A.jpg",
+  "/resized_images/IMG_5044.jpg",
+  "/resized_images/IMG_6978.jpg",
+  "/resized_images/IMG_9254.jpg",
+  "/resized_images/IMG_3004.jpg",
+  "/resized_images/Final_Philo_Lucien.jpg",
+  "/resized_images/IMG_2622.jpg",
+  "/resized_images/IMG_2597_V1.jpg",
+  "/resized_images/IMG_7362.jpg",
+  "/resized_images/Puma-30.060557.jpg",
+  "/resized_images/_DSC3258.jpg",
+  "/resized_images/210723_AY_THOMSEN_M08_145.jpg",
+  "/resized_images/IMG_0043_.jpg",
+  "/resized_images/IMG_2553.jpg",
+  "/resized_images/_IMG_3132-2.jpg",
+];
+
 export const ALLprojects = [
   "/resized_images/IMG_0028_1.jpg",
   "/resized_images/IMG_9876_.jpg",
