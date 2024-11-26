@@ -256,14 +256,15 @@ export default function Selected() {
             className="w-full h-full hidden md:block absolute origin-top bg-black"
           ></div> */}
           <div
-            className="w-[90vw] flex justify-center invisible overflow-hidden md:w-[50vw] max-h-[65vh] md:max-h-[75vh]"
+            className="w-[90vw] flex items-start relative invisible overflow-hidden md:w-[80vw] h-[65vh] md:h-[75vh]"
             ref={bottomImageRef}
           >
             <Image
               src={selected[currentIndex]}
-              width={500}
-              height={500}
-              className="object-contain self-end object-bottom"
+              // width={500}
+              // height={500}
+              fill
+              className="self-end object-contain object-center block"
               alt="Selected Image"
             />
           </div>
