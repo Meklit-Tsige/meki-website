@@ -1,7 +1,7 @@
 "use client";
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
-import { ALLprojects, projects } from "../components/data";
+import { ALLprojects, frontImages, projects } from "../components/data";
 import { useEffect, useRef, useState } from "react";
 import Counter from "@/components/Counter";
 import Image from "next/image";
@@ -99,7 +99,7 @@ export default function Home() {
           {
             visibility: "visible",
           },
-          "-=2"
+          "-=1"
         )
         .to(
           revealRefs.current,
@@ -130,7 +130,7 @@ export default function Home() {
           {
             visibility: "visible",
           },
-          "-=1.7"
+          "<"
         )
         .to(
           revealRefs.current,
@@ -153,16 +153,6 @@ export default function Home() {
   const [focusedProject, setFocusedProject] = useState(null);
   const [hoveredIndex, setHoveredIndex] = useState(null);
   const [hovered, setHovered] = useState(false);
-
-  // // TODO: this doesnt seem to work yet
-  // useEffect(() => {
-  //   if (openDetails) {
-  //     console.log("stop scroll");
-  //     document.body.style.overflow = "hidden";
-  //   } else {
-  //     document.body.style.overflow = "unset";
-  //   }
-  // }, [openDetails]);
 
   return (
     <Inner backgroundColor={"#B0AD98"}>
@@ -192,12 +182,12 @@ export default function Home() {
                 Overview
               </Link>
             </div>
-            <div className="invisible" tabindex="0" ref={addToRevealRefs}>
+            <div className="invisible" tabIndex="0" ref={addToRevealRefs}>
               <Link href={"/selected"} className={`headerLink`}>
                 Selected
               </Link>
             </div>
-            <div className="invisible" tabindex="0" ref={addToRevealRefs}>
+            <div className="invisible" tabIndex="0" ref={addToRevealRefs}>
               <Link href={"/about"} className={`headerLink `}>
                 About
               </Link>
@@ -226,8 +216,8 @@ export default function Home() {
             // }
             className={`flex flex-col gap-16 px-5 pt-8 md:pt-16`}
           >
-            <div className="flex w-full flex-wrap gap-x-2 gap-y-8 sm:gap-x-4 sm:gap-y-12 justify-between">
-              {ALLprojects.map((project, index) => (
+            <div className="flex w-full flex-wrap gap-x-4 gap-y-8 md:gap-x-12 md:gap-y-12 justify-between">
+              {frontImages.map((project, index) => (
                 <div
                   key={index}
                   ref={addToImageRefs}
@@ -248,11 +238,11 @@ export default function Home() {
                     setHovered(false);
                     setHoveredIndex(null);
                   }}
-                  className="w-3/12 sm:w-1/12 cursor-pointer invisible max-w-20 max-h-24 overflow-hidden relative"
+                  className="cursor-pointer w-28 h-36 md:w-36 md:h-44 invisible overflow-hidden relative"
                 >
                   <Image
                     style={{
-                      opacity: hoveredIndex === index ? 0.5 : 1,
+                      opacity: hoveredIndex === index ? 0.7 : 1,
                       transition: "opacity 1s cubic-bezier(0.16, 1, 0.3, 1)",
                     }}
                     // ${
@@ -261,8 +251,11 @@ export default function Home() {
                     //     : ""
                     // }
                     src={project}
-                    height={700}
-                    width={500}
+                    sizes="10vw"
+                    className="object-cover"
+                    // height={700}
+                    // width={500}
+                    fill
                     alt={project}
                   />
                 </div>

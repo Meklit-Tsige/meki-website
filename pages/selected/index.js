@@ -58,7 +58,6 @@ export default function Selected() {
     gsap.set(revealRefs.current, {
       yPercent: 100,
     });
-    
 
     if (size.width < 768) {
       gsap.set(imageRefs.current, {
@@ -250,14 +249,14 @@ export default function Selected() {
           </div>
         </div>
 
-        <div className="flex w-full mb-6 mt-12">
+        <div className="flex w-full mb-6 justify-center mt-12">
           {/* <div
             ref={imageMaskRef}
             style={{ zIndex: 10 }}
             className="w-full h-full hidden md:block absolute origin-top bg-black"
           ></div> */}
           <div
-            className="w-[90vw] ml-5 invisible overflow-hidden md:w-[45vw] max-h-[65vh] md:max-h-[70vh]"
+            className="w-[90vw] flex justify-center invisible overflow-hidden md:w-[50vw] max-h-[65vh] md:max-h-[75vh]"
             ref={bottomImageRef}
           >
             <Image
@@ -265,7 +264,7 @@ export default function Selected() {
               width={500}
               height={500}
               className="object-contain self-end object-bottom"
-              alt=""
+              alt="Selected Image"
             />
           </div>
         </div>

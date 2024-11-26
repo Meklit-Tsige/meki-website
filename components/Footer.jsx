@@ -46,7 +46,6 @@ export default function Footer() {
     master.add(setInitialStates).add(preloaderAnimation());
   }, []);
 
-
   return (
     <div
       style={{ zIndex: 9999, fontSize: "0.8rem" }}
@@ -63,7 +62,9 @@ export default function Footer() {
         <div className="invisible" ref={addToRevealRefs}>
           <Link
             href={"/"}
-            className={`${pathname === "/" ? "underline" : "headerLink"} hidden md:block`}
+            className={`${
+              pathname === "/" ? "underline" : "headerLink"
+            } hidden md:block`}
           >
             Overview
           </Link>

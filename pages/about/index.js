@@ -7,6 +7,7 @@ import Inner from "../../components/Layout/Inner";
 import Footer from "@/components/Footer";
 import ImageMouseGallery from "@/components/ImageGalleryMouse/ImageMouseGallery";
 import CustomCursor from "@/components/CustomCursor";
+import Image from "next/image";
 export default function About() {
   gsap.registerPlugin(useGSAP);
 
@@ -132,37 +133,62 @@ export default function About() {
       </ImageMouseGallery> */}
       <div
         style={{
-          zIndex: 9997,
+          zIndex: 10,
         }}
-        className="h-screen absolute inset-0 w-full flex flex-col justify-center items-center"
+        className="h-screen absolute  inset-0 w-full flex justify-between items-center"
       >
-        <div className="text-[10vw] leading-[10vw] md:text-[7vw] md:leading-[7vw] font-medium flex flex-col uppercase tracking-wide text-center">
-          <div className="overflow-hidden">
+        <div className="px-12 h-[80vh] flex">
+          <div className="w-5/12 bg-purple-300 mb-[30vh] mr-4 relative">
+            <Image src={"/hugh/IMG_9254.webp"} alt="biopic" fill className="object-cover" />
+          </div>
+          <div className="w-7/12 font-bold pl-4 flex items-end">
+            Contrary to popular belief, Lorem Ipsum is not simply random text.
+            It has roots in a piece of classical Latin literature from 45 BC,
+            making it over 2000 years old. Richard McClintock, a Latin professor
+            at Hampden-Sydney College in Virginia, looked up one of the more
+            obscure Latin words, consectetur, from a Lorem Ipsum passage, and
+            going through the cites of the word in classical literature,
+            discovered the undoubtable source. <br /> Lorem Ipsum comes from
+            sections 1.10.32 and 1.10.33 of "de Finibus Bonorum et Malorum" (The
+            Extremes of Good and Evil) by Cicero, written in 45 BC. This book is
+            a treatise on the theory of ethics, very popular during the
+            Renaissance. The first line of Lorem Ipsum, "Lorem ipsum dolor sit
+            amet..", comes from a line in section 1.10.32. The standard chunk of
+            Lorem Ipsum used since the 1500s is reproduced below for those
+            interested. Sections 1.10.32 and 1.10.33 from "de Finibus Bonorum et
+            Malorum" by Cicero are also reproduced in their exact original form,
+            accompanied by English versions from the 1914 translation by H.
+            Rackham.
+          </div>
+          {/* <div className="text-[10vw] borderr leading-[10vw] md:text-[7vw] md:leading-[7vw] font-medium flex flex-col uppercase tracking-wide text-center">
+            <div className="overflow-hidden">
+              <div className="overflow-hidden">
+                <div
+                  className="invisible selection:bg-white selection:text-black"
+                  ref={addToRevealRefs}
+                >
+                  Meklit Fekadu
+                </div>
+              </div>
+              <div
+                className="invisible selection:bg-white selection:text-black"
+                ref={addToRevealRefs}
+              >
+                Photographer
+              </div>
+            </div>
             <div className="overflow-hidden ">
               <div
                 className="invisible selection:bg-white selection:text-black"
                 ref={addToRevealRefs}
               >
-                Meklit Fekadu
+                C.2025
               </div>
             </div>
-            <div
-              className="invisible selection:bg-white selection:text-black"
-              ref={addToRevealRefs}
-            >
-              Photographer
-            </div>
-          </div>
-          <div className="overflow-hidden ">
-            <div
-              className="invisible selection:bg-white selection:text-black"
-              ref={addToRevealRefs}
-            >
-              C.2025
-            </div>
-          </div>
+          </div> */}
         </div>
       </div>
+
       <div
         style={{ zIndex: 9999, fontSize: "0.8rem" }}
         className="fixed bottom-0 w-full flex uppercase pb-2 px-5"
@@ -172,7 +198,7 @@ export default function About() {
             <div className="invisible" ref={addToHeaderRevealRefs}>
               <a
                 href="mailto:meklit-tsige@outlook.de"
-                className="md:text-base"
+                className="headerLink"
                 ref={addToHeaderRevealRefs}
               >
                 meklit-tsige@outlook.de

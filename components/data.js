@@ -16,7 +16,7 @@ export const selected = [
   "/mytheresa_social Media_sonnenuntergang/CEC09210-5FB3-43E4-975F-CF103FB0862A.webp",
   "/Amra_ShapeShift_editorialShoot/IMG_5044.webp",
   "/JAY_Editorial/IMG_6978.webp",
-  "/Reebok_AboutYoiu_CLACK STUDIO/IMG_9254.webp",
+  "/hugh/IMG_9254.webp",
   "/Reebok_AboutYoiu_CLACK STUDIO/IMG_3004.webp",
   "/Philo und Lucien/Final_Philo_Lucien.webp",
   "/Reebok_AboutYoiu_CLACK STUDIO/IMG_2622.webp",
@@ -238,13 +238,47 @@ export const ALLprojects = [
   "/resized_images/US-PEOPLE-Sidney.jpg",
 ];
 
+export const frontImages = [
+  "/2050_Magazin__Jannis_Malick/IMG_0379.webp",
+  "/About you x Lisa/210723_AY_THOMSEN_M08_145.webp",
+  "/AFEW x Nike Jordan 4/IMG_09273043.webp",
+  "/Amra_ShapeShift_editorialShoot/IMG_5044.webp",
+  "/badmomzjay_Das Wetter Magazin_CoverShoot/IMG_00162787.webp",
+  "/Bete_Editorial_AddisAbeba/A1_Livingroom.webp",
+  "/Ebru_Aleyna_DasWetter_CoverShoot/IMG_6711.webp",
+  "/Fashion Editorial_A Passage of Resilience./IMG_2553.webp",
+  "/FASHION EDITORIAL_Out of Fear on missing out on love/_DSC3258.webp",
+  "/GooglePixel_9Pro/PXL_20240918_075506440.RAW-01.COVER~8.webp",
+  "/H&M_NoFear/IMG_4004_edited.webp",
+  "/JAY_Editorial/IMG_7362.webp",
+  "/JOY_Missy_Magazine_Cover_Shoot/IMG_7779.webp",
+  "/Kiala_freies_Projekt/IMG_0043_.webp",
+  "/Layla_Das Wetter_CoverShoot/61DAE4D6-9E9D-4F06-84BB-FAC3F6BE1153-A9132D70-9166-4910-AE20-62F0AB78C93C.webp",
+  "/Levis 90s_Social Capmpaign_Shoot/IMG_9142.webp",
+  "/Lisa und Tanja_Socials/IMG_3840-Kopie.webp",
+  "/mytheresa_social Media_sonnenuntergang/IMG_2165_V1.webp",
+  "/MYTHERESA_SOCIALS_Best Friends/BF_Instagram__0026_IMG_4469_V1.webp",
+  "/mytheresaxloewe_motive_01_0182_v2-jpg_2022-03-10_1633/MYTHERESAxLOEWE_MOTIVE_06_0161_V2.webp",
+  "/Paula Hartmann_Das Wetter_CoverShoot/IMG_0463.webp",
+  "/Philo und Lucien/EF6CC981-82CB-4FA8-B456-DBDC78DEDA28-2.webp",
+  "/PUMA_SocialActivation_Shoot/CA4602A7.webp",
+  "/Reebok_AboutYoiu_CLACK STUDIO/IMG_0493.webp",
+  "/SGTV_Shoo/IMG_9161-Kopie.webp",
+  "/SYMBA_Das Wetter_CoverStory/01_Symba_Cover_IMG_6464_edited.webp",
+  "/Telekom/IMG_3080.webp",
+  "/US PEOPLExVogue/US-PEOPLE-Mandhla_.webp",
+  "/Whintey_Polas_extras/IMG_5309-Kopie.webp",
+  "/whitney_Polaroids/IMG_8701.webp",
+  "/hugh/IMG_9254.webp",
+];
+
 export const projects = [
   {
     title: "Kiala",
     images: [
+      "/Kiala_freies_Projekt/IMG_0043_.webp",
       "/Kiala_freies_Projekt/IMG_0028_1.webp",
       "/Kiala_freies_Projekt/IMG_9876_.webp",
-      "/Kiala_freies_Projekt/IMG_0043_.webp",
       "/Kiala_freies_Projekt/IMG_9855-Kopie_.webp",
       "/Kiala_freies_Projekt/IMG_9941_.webp",
     ],
@@ -268,17 +302,23 @@ export const projects = [
   },
   {
     title: "Digital optimisim",
-    images: ["/Telekom/_IMG_3132-2.webp", "/Telekom/IMG_3080.webp"],
+    images: ["/Telekom/IMG_3080.webp", "/Telekom/_IMG_3132-2.webp"],
     description:
       'I collaborated with Telekom on a project exploring "Digital Optimism." Despite ongoing injustices in the world, its crucial to reconnect and use every opportunity to spark new dialogues—across boundaries of time, space, social background, or age. Digitalization has amplified more voices than ever, making our communication increasingly human. My photo series aimed to capture this: the embrace, closeness, and warmth between people merging with technology\'s potential.',
     year: 2020,
   },
   {
+    title: "Hugh",
+    images: ["/hugh/IMG_9254.webp"],
+    description: "",
+    year: 2021,
+  },
+  {
     title: "Outtakes",
     images: [
+      "/whitney_Polaroids/IMG_8701.webp",
       "/whitney_Polaroids/IMG_8708.webp",
       "/whitney_Polaroids/IMG_8738.webp",
-      "/whitney_Polaroids/IMG_8701.webp",
     ],
     description:
       "Behind-the-scenes moments from a sunny Pola shoot with model Whitney Kiala.",
@@ -287,12 +327,12 @@ export const projects = [
   {
     title: "About You x Lisa",
     images: [
+      "/About you x Lisa/210723_AY_THOMSEN_M08_145.webp",
       "/About you x Lisa/210723_AY_THOMSEN_M09_111.webp",
       "/About you x Lisa/210723_AY_THOMSEN_M05_165.webp",
       "/About you x Lisa/210723_AY_THOMSEN_M04_144.webp",
       "/About you x Lisa/210723_AY_THOMSEN_M03_040.webp",
       "/About you x Lisa/210723_AY_THOMSEN_M12_178.webp",
-      "/About you x Lisa/210723_AY_THOMSEN_M08_145.webp",
     ],
     description: "Lisa Thomsen for aboutyou.de",
     year: 2021,
@@ -327,8 +367,8 @@ export const projects = [
   {
     title: "Reebok x About You",
     images: [
-      "/Reebok_AboutYoiu_CLACK STUDIO/IMG_2723.webp",
       "/Reebok_AboutYoiu_CLACK STUDIO/IMG_0493.webp",
+      "/Reebok_AboutYoiu_CLACK STUDIO/IMG_2723.webp",
       "/Reebok_AboutYoiu_CLACK STUDIO/IMG_1807.webp",
       "/Reebok_AboutYoiu_CLACK STUDIO/IMG_3004.webp",
       "/Reebok_AboutYoiu_CLACK STUDIO/IMG_2622.webp",
@@ -351,8 +391,8 @@ export const projects = [
   {
     title: "The Light is Greater",
     images: [
-      "/SGTV_Shoo/IMG_8901-Kopie.webp",
       "/SGTV_Shoo/IMG_9161-Kopie.webp",
+      "/SGTV_Shoo/IMG_8901-Kopie.webp",
       "/SGTV_Shoo/IMG_9545-Kopie.webp",
     ],
     description:
@@ -362,10 +402,10 @@ export const projects = [
   {
     title: "Paula Hartmann",
     images: [
+      "/Paula Hartmann_Das Wetter_CoverShoot/IMG_0463.webp",
       "/Paula Hartmann_Das Wetter_CoverShoot/IMG_0581.webp",
       "/Paula Hartmann_Das Wetter_CoverShoot/IMG_0518.webp",
       "/Paula Hartmann_Das Wetter_CoverShoot/IMG_0213.webp",
-      "/Paula Hartmann_Das Wetter_CoverShoot/IMG_0463.webp",
     ],
     description:
       "Cover Story featuring German singer and actor Paula Hartmann shot for „Das Wetter - Magazin für Text und Musik“ Ausgabe 27.",
@@ -374,8 +414,8 @@ export const projects = [
   {
     title: "Layla",
     images: [
-      "/Layla_Das Wetter_CoverShoot/52c84024-ae46-4b9d-bb0c-99d3cc6043b6.webp",
       "/Layla_Das Wetter_CoverShoot/61DAE4D6-9E9D-4F06-84BB-FAC3F6BE1153-A9132D70-9166-4910-AE20-62F0AB78C93C.webp",
+      "/Layla_Das Wetter_CoverShoot/52c84024-ae46-4b9d-bb0c-99d3cc6043b6.webp",
     ],
     description:
       "Cover Story featuring German rapper Layla Boe shot for „Das Wetter - Magazin für Text und Musik“ Ausgabe 23.",
@@ -384,9 +424,9 @@ export const projects = [
   {
     title: "Rawm",
     images: [
+      "/Lisa und Tanja_Socials/IMG_3840-Kopie.webp",
       "/Lisa und Tanja_Socials/IMG_3745-Kopie.webp",
       "/Lisa und Tanja_Socials/IMG_2778-Kopie_2.webp",
-      "/Lisa und Tanja_Socials/IMG_3840-Kopie.webp",
       "/Lisa und Tanja_Socials/000316760011.webp",
       "/Lisa und Tanja_Socials/IMG_3440-Kopie.webp",
       "/Lisa und Tanja_Socials/000316750006-Kopie.webp",
@@ -412,9 +452,9 @@ export const projects = [
   {
     title: "Symba",
     images: [
+      "/SYMBA_Das Wetter_CoverStory/01_Symba_Cover_IMG_6464_edited.webp",
       "/SYMBA_Das Wetter_CoverStory/IMG_6432.webp",
       "/SYMBA_Das Wetter_CoverStory/IMG_6382.webp",
-      "/SYMBA_Das Wetter_CoverStory/01_Symba_Cover_IMG_6464_edited.webp",
       "/SYMBA_Das Wetter_CoverStory/IMG_6415.webp",
       "/SYMBA_Das Wetter_CoverStory/IMG_6421.webp",
       "/SYMBA_Das Wetter_CoverStory/IMG_6482-2.webp",
@@ -427,8 +467,8 @@ export const projects = [
   {
     title: "Mytheresa x Loewe & On Running",
     images: [
-      "/mytheresaxloewe_motive_01_0182_v2-jpg_2022-03-10_1633/MYTHERESAxLOEWE_MOTIVE_02_0168_V1.webp",
       "/mytheresaxloewe_motive_01_0182_v2-jpg_2022-03-10_1633/MYTHERESAxLOEWE_MOTIVE_06_0161_V2.webp",
+      "/mytheresaxloewe_motive_01_0182_v2-jpg_2022-03-10_1633/MYTHERESAxLOEWE_MOTIVE_02_0168_V1.webp",
       "/mytheresaxloewe_motive_01_0182_v2-jpg_2022-03-10_1633/MYTHERESAxLOEWE_MOTIVE_05_0032_V2.webp",
       "/mytheresaxloewe_motive_01_0182_v2-jpg_2022-03-10_1633/MYTHERESAxLOEWE_MOTIVE_03_0257_V3.webp",
       "/mytheresaxloewe_motive_01_0182_v2-jpg_2022-03-10_1633/MYTHERESAxLOEWE_MOTIVE_04_0006_V2.webp",
@@ -441,10 +481,10 @@ export const projects = [
   {
     title: "Bete",
     images: [
+      "/Bete_Editorial_AddisAbeba/A1_Livingroom.webp",
       "/Bete_Editorial_AddisAbeba/A2_MumandDad.webp",
       "/Bete_Editorial_AddisAbeba/A1_bedroom.webp",
       "/Bete_Editorial_AddisAbeba/IMG_8535-Kopie.webp",
-      "/Bete_Editorial_AddisAbeba/A1_Livingroom.webp",
       "/Bete_Editorial_AddisAbeba/A2_hands.webp",
       "/Bete_Editorial_AddisAbeba/A1_Editorial.webp",
       "/Bete_Editorial_AddisAbeba/A0_Grandmasgarden.webp",
@@ -456,8 +496,8 @@ export const projects = [
   {
     title: "Badmómzjay",
     images: [
-      "/badmomzjay_Das Wetter Magazin_CoverShoot/IMG_00032782.webp",
       "/badmomzjay_Das Wetter Magazin_CoverShoot/IMG_00162787.webp",
+      "/badmomzjay_Das Wetter Magazin_CoverShoot/IMG_00032782.webp",
       "/badmomzjay_Das Wetter Magazin_CoverShoot/IMG_99982856.webp",
     ],
     description:
@@ -467,10 +507,10 @@ export const projects = [
   {
     title: "H&M No Fear Campaign",
     images: [
+      "/H&M_NoFear/IMG_4004_edited.webp",
       "/H&M_NoFear/IMG_3260_edited.webp",
       "/H&M_NoFear/IMG_3425_edited.webp",
       "/H&M_NoFear/IMG_3513_edited.webp",
-      "/H&M_NoFear/IMG_4004_edited.webp",
       "/H&M_NoFear/IMG_3706_edited.webp",
       "/H&M_NoFear/IMG_3207_edited.webp",
     ],
@@ -481,13 +521,13 @@ export const projects = [
   {
     title: "Joy",
     images: [
+      "/JOY_Missy_Magazine_Cover_Shoot/IMG_7779.webp",
       "/JOY_Missy_Magazine_Cover_Shoot/IMG_7720.webp",
       "/JOY_Missy_Magazine_Cover_Shoot/IMG_7927.webp",
       "/JOY_Missy_Magazine_Cover_Shoot/IMG_8021-3.webp",
       "/JOY_Missy_Magazine_Cover_Shoot/IMG_8009-3.webp",
       "/JOY_Missy_Magazine_Cover_Shoot/IMG_7734.webp",
       "/JOY_Missy_Magazine_Cover_Shoot/IMG_7866.webp",
-      "/JOY_Missy_Magazine_Cover_Shoot/IMG_7779.webp",
       "/JOY_Missy_Magazine_Cover_Shoot/IMG_7778.webp",
     ],
     description:
@@ -497,11 +537,11 @@ export const projects = [
   {
     title: "Out of Fear of Missing Out on Love",
     images: [
+      "/FASHION EDITORIAL_Out of Fear on missing out on love/_DSC3258.webp",
       "/FASHION EDITORIAL_Out of Fear on missing out on love/_DSC3233.webp",
       "/FASHION EDITORIAL_Out of Fear on missing out on love/_DSC3182.webp",
       "/FASHION EDITORIAL_Out of Fear on missing out on love/_DSC3556.webp",
       "/FASHION EDITORIAL_Out of Fear on missing out on love/_DSC2760.webp",
-      "/FASHION EDITORIAL_Out of Fear on missing out on love/_DSC3258.webp",
       "/FASHION EDITORIAL_Out of Fear on missing out on love/_DSC3407.webp",
       "/FASHION EDITORIAL_Out of Fear on missing out on love/_DSC3870.webp",
     ],
@@ -512,12 +552,12 @@ export const projects = [
   {
     title: "Nike Jordan 4 Shimmer x Afew",
     images: [
+      "/AFEW x Nike Jordan 4/IMG_09273043.webp",
       "/AFEW x Nike Jordan 4/IMG_07903014.webp",
       "/AFEW x Nike Jordan 4/IMG_06072976.webp",
       "/AFEW x Nike Jordan 4/IMG_08653030.webp",
       "/AFEW x Nike Jordan 4/IMG_07543003.webp",
       "/AFEW x Nike Jordan 4/IMG_07743007.webp",
-      "/AFEW x Nike Jordan 4/IMG_09273043.webp",
       "/AFEW x Nike Jordan 4/IMG_05122962.webp",
     ],
     description:
@@ -527,9 +567,9 @@ export const projects = [
   {
     title: "A Passage of Resilience",
     images: [
+      "/Fashion Editorial_A Passage of Resilience./IMG_2553.webp",
       "/Fashion Editorial_A Passage of Resilience./IMG_1876.webp",
       "/Fashion Editorial_A Passage of Resilience./IMG_2734.webp",
-      "/Fashion Editorial_A Passage of Resilience./IMG_2553.webp",
       "/Fashion Editorial_A Passage of Resilience./IMG_2192__.webp",
       "/Fashion Editorial_A Passage of Resilience./IMG_2860.webp",
       "/Fashion Editorial_A Passage of Resilience./IMG_2525_.webp",
@@ -547,13 +587,13 @@ export const projects = [
   {
     title: "Unpolished Harmony",
     images: [
+      "/JAY_Editorial/IMG_7362.webp",
       "/JAY_Editorial/IMG_7652.webp",
       "/JAY_Editorial/IMG_7536.webp",
       "/JAY_Editorial/IMG_7442_1.webp",
       "/JAY_Editorial/IMG_6952_1.webp",
       "/JAY_Editorial/IMG_7329_1.webp",
       "/JAY_Editorial/IMG_7180.webp",
-      "/JAY_Editorial/IMG_7362.webp",
       "/JAY_Editorial/IMG_7172_1.webp",
       "/JAY_Editorial/IMG_6978.webp",
     ],
@@ -563,11 +603,11 @@ export const projects = [
   {
     title: "Sundown",
     images: [
+      "/mytheresa_social Media_sonnenuntergang/IMG_2165_V1.webp",
       "/mytheresa_social Media_sonnenuntergang/IMG_2414_V1.webp",
       "/mytheresa_social Media_sonnenuntergang/IMG_2267_V1.webp",
       "/mytheresa_social Media_sonnenuntergang/CEC09210-5FB3-43E4-975F-CF103FB0862A.webp",
       "/mytheresa_social Media_sonnenuntergang/IMG_2597_V1.webp",
-      "/mytheresa_social Media_sonnenuntergang/IMG_2165_V1.webp",
       "/mytheresa_social Media_sonnenuntergang/Unknown-copy.webp",
       "/mytheresa_social Media_sonnenuntergang/IMG_2510_V1.webp",
       "/mytheresa_social Media_sonnenuntergang/IMG_2461_V1.webp",
@@ -579,10 +619,10 @@ export const projects = [
   {
     title: "Levi’s 90s 501 Jeans",
     images: [
+      "/Levis 90s_Social Capmpaign_Shoot/IMG_9142.webp",
       "/Levis 90s_Social Capmpaign_Shoot/IMG_8375.webp",
       "/Levis 90s_Social Capmpaign_Shoot/IMG_8230.webp",
       "/Levis 90s_Social Capmpaign_Shoot/00ec87d3-64f8-4041-b38d-d0729cffb63b.webp",
-      "/Levis 90s_Social Capmpaign_Shoot/IMG_9142.webp",
       "/Levis 90s_Social Capmpaign_Shoot/IMG_8903.webp",
       "/Levis 90s_Social Capmpaign_Shoot/IMG_8752-Kopie.webp",
       "/Levis 90s_Social Capmpaign_Shoot/IMG_9517.webp",
@@ -594,9 +634,9 @@ export const projects = [
   {
     title: "Shapeshift",
     images: [
+      "/Amra_ShapeShift_editorialShoot/IMG_5044.webp",
       "/Amra_ShapeShift_editorialShoot/IMG_4771.webp",
       "/Amra_ShapeShift_editorialShoot/IMG_4489-3-Kopie.webp",
-      "/Amra_ShapeShift_editorialShoot/IMG_5044.webp",
       "/Amra_ShapeShift_editorialShoot/IMG_5195.webp",
       "/Amra_ShapeShift_editorialShoot/IMG_4720.webp",
       "/Amra_ShapeShift_editorialShoot/IMG_5062.webp",
@@ -619,12 +659,12 @@ export const projects = [
   {
     title: "Best Friends",
     images: [
+      "/MYTHERESA_SOCIALS_Best Friends/BF_Instagram__0026_IMG_4469_V1.webp",
       "/MYTHERESA_SOCIALS_Best Friends/BF_Instagram__0012_IMG_7081_V1.webp",
       "/MYTHERESA_SOCIALS_Best Friends/BF_Instagram__0016_IMG_6460_V2.webp",
       "/MYTHERESA_SOCIALS_Best Friends/BF_Instagram__0003_IMG_8812_V2.webp",
       "/MYTHERESA_SOCIALS_Best Friends/BF_Instagram__0027_IMG_4325_V1.webp",
       "/MYTHERESA_SOCIALS_Best Friends/BF_Instagram__0007_IMG_7863_V2.webp",
-      "/MYTHERESA_SOCIALS_Best Friends/BF_Instagram__0026_IMG_4469_V1.webp",
     ],
     description:
       "Summer collection campaign for mytheresa.com featuring moments of joy and connection — between siblings, lovers, and pet owners.",
@@ -633,8 +673,8 @@ export const projects = [
   {
     title: "US PEOPLE",
     images: [
-      "/US PEOPLExVogue/US-PEOPLE-Cedric.webp",
       "/US PEOPLExVogue/US-PEOPLE-Mandhla_.webp",
+      "/US PEOPLExVogue/US-PEOPLE-Cedric.webp",
       "/US PEOPLExVogue/US-PEOPLE-Maurice-&-Fayim.webp",
       "/US PEOPLExVogue/US-PEOPLE-Sidney.webp",
     ],
