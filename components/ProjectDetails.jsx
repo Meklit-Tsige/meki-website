@@ -244,8 +244,7 @@ export default function ProjectDetails({
               >
                 <a
                   className="absolute h-full uppercase w-full text-xs flex items-center justify-center text-opacity-70"
-                  href="https://vimeo.com"
-                  // TODO: add real link
+                  href="https://vimeo.com/1033935873?share=copy"
                   target="_blank"
                   style={{ zIndex: 10001 }}
                 >
