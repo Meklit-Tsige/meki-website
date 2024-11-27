@@ -238,17 +238,26 @@ export default function ProjectDetails({
               </div>
             ))}
             {project.title === "Bete" && (
-              <video
+              <div
                 ref={addToImageRefs}
-                className="h-fit w-[80vw] md:w-[40vw] mr-4 flex items-center justify-center relative"
-                controls
+                className="h-[60vh] md:h-[70vh] w-[80vw] md:w-[35vw] object-top relative shrink-0"
               >
-                <source
-                  src="/Bete_Editorial_AddisAbeba/bete_video.webm"
-                  type="video/webm"
+                <a
+                  className="absolute h-full uppercase w-full text-xs flex items-center justify-center text-opacity-70"
+                  href="https://vimeo.com"
+                  // TODO: add real link
+                  target="_blank"
+                  style={{ zIndex: 10001 }}
+                >
+                  Click for full video
+                </a>
+                <Image
+                  src={"/Bete_Editorial_AddisAbeba/bete_video.gif"}
+                  fill
+                  className="object-contain"
+                  alt={"bete video"}
                 />
-                Your browser does not support the video tag.
-              </video>
+              </div>
             )}
           </div>
         </div>

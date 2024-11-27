@@ -164,7 +164,7 @@ export default function Home() {
           openDetails={openDetails}
         />
       )}
-      <div className="flex flex-col">
+      <div className="flex flex-col noScrollBar">
         <div
           style={{ zIndex: 9999, fontSize: "0.8rem" }}
           className="px-5 py-3 flex font-medium items-center uppercase w-full"
@@ -214,9 +214,9 @@ export default function Home() {
             // ${
             //   hasPageLoaded ? "mt-36" : "mt-24"
             // }
-            className={`flex flex-col gap-16 px-5 pt-8 md:pt-16`}
+            className={`flex flex-col gap-16 px-5 pt-8 md:pt-16 noScrollBar`}
           >
-            <div className="w-full grid grid-cols-3 gap-x-4 gap-y-8 md:flex md:flex-wrap md:gap-x-12 md:gap-y-12 justify-between">
+            <div className="w-full noScrollBar grid grid-cols-3 gap-x-4 gap-y-8 md:flex md:flex-wrap md:gap-x-12 md:gap-y-12 justify-between">
               {frontImages.map((project, index) => (
                 <div
                   key={index}
@@ -267,4 +267,3 @@ export default function Home() {
     </Inner>
   );
 }
-
