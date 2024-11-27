@@ -59,31 +59,18 @@ export default function Footer() {
         </div>
       </div>
       <div className="w-6/12 flex justify-between overflow-hidden">
-        <div className="invisible" ref={addToRevealRefs}>
-          <Link
-            href={"/"}
-            className={`${
-              pathname === "/" ? "underline" : "headerLink"
-            } hidden md:block`}
-          >
+        <div className="invisible hidden md:inline-block" ref={addToRevealRefs}>
+          <Link href={"/"} className={`headerLink`}>
             Overview
           </Link>
         </div>
         <div className="invisible" ref={addToRevealRefs}>
-          <Link
-            href={"/selected"}
-            className={`${
-              pathname === "/selected" ? "underline" : "headerLink"
-            }`}
-          >
+          <Link href={"/selected"} className={`headerLink`}>
             Selected
           </Link>
         </div>
         <div className="invisible" ref={addToRevealRefs}>
-          <Link
-            href={"/about"}
-            className={`${pathname === "/about" ? "underline" : "headerLink"}`}
-          >
+          <Link href={"/about"} className={`underline`}>
             About
           </Link>
         </div>

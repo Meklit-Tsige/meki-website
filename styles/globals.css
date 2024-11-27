@@ -17,6 +17,63 @@ a::selection {
   color: black;
 }
 
+.div-with-borders {
+  position: relative; /* Ensures pseudo-elements position relative to the div */
+  z-index: 1; /* Content should stay above pseudo-elements */
+  /* give the parent div a border of 1px solid color */
+  border: 1px solid white;
+}
+
+.div-with-borders::before,
+.div-with-borders::after {
+  content: '';
+  position: absolute;
+  z-index: 10; /* Position pseudo-elements over the content, so it is on top of the border element */
+  pointer-events: none; /* Ensure no interference with user interactions */
+}
+
+/* Top and Bottom Borders */
+.div-with-borders::before {
+  top: -2px; /* to position the pseudo element exactly above the where the border would be */
+  left: 0;
+  margin-left: 10px;
+  margin-right: 10px;
+  right: 0;
+  height: 3px; /* Thickness of the top border */
+  background-color: black; /* Color of the top and bottom borders, has to be differnet than border color of parent div */
+}
+
+.div-with-borders::after {
+  bottom: -2px;
+  left: 0;
+  right: 0;
+  margin-left: 10px;
+  margin-right: 10px;
+  height: 3px; /* Thickness of the bottom border */
+  background-color: black; /* Color of the top and bottom borders */
+}
+
+/* Left and Right Borders */
+.div-with-borders > .border-left,
+.div-with-borders > .border-right {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  width: 3px; /* Thickness of the left/right borders */
+  background-color: black; /* Color of the left and right borders */
+}
+
+.div-with-borders > .border-left {
+  left: -2px;
+}
+
+.div-with-borders > .border-right {
+  right: -2px;
+}
+
+
 .arrowCursorRight {
   cursor: e-resize;
 }
