@@ -619,7 +619,7 @@ export const projects = [
     year: 2024,
   },
   {
-    title: "Unpolished Harmony",
+    title: "Pursuit",
     images: [
       "/JAY_Editorial/IMG_7362.webp",
       "/JAY_Editorial/IMG_7652.webp",
@@ -631,7 +631,8 @@ export const projects = [
       "/JAY_Editorial/IMG_7172_1.webp",
       "/JAY_Editorial/IMG_6978.webp",
     ],
-    description: `In the heart of Kreuzberg, Berlin\’s most authentic and culturally rich district, we shot a series exploring the raw, rhythmic pulse of the neighborhood. Kreuzberg is more than just a backdrop; it\’s a canvas of contrasts—where grit and creativity, history and rebellion come together. Here, every corner tells a story, and we aimed to capture its unique spirit in each frame. This shoot celebrates Kreuzberg not only as a place but as a feeling—a vibe where individual stories blend into a larger narrative of art, music, and culture. It\’s a tribute to the artists, dreamers, and locals who have shaped Kreuzberg and continue to keep its spirit alive.`,
+    description:
+      "Before launching Jay Cobain’s EP „Pursuit“, we wanted to share a glimpse of what’s coming—a raw journey into the lives of the oppressed, defiant, and dreamers. More than an album, „Pursuit“ is a movement, channeling frustration with war, injustice, and the fight for belonging. It speaks to Arabs and Muslims in Germany, minorities in the UK, and anyone betrayed by those in power. Through tracks like „Opacity“ and „Topgun“, it raises a rallying cry against silence while searching for peace in chaos. This is a journey of anger, rebellion, and self-discovery. Feel the tension, resistance, and hope. „Pursuit“ is coming—get ready.",
     year: 2024,
   },
   {

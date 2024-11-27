@@ -216,7 +216,7 @@ export default function Home() {
             // }
             className={`flex flex-col gap-16 px-5 pt-8 md:pt-16`}
           >
-            <div className="flex w-full flex-wrap gap-x-4 gap-y-8 md:gap-x-12 md:gap-y-12 justify-between">
+            <div className="w-full grid grid-cols-3 gap-x-4 gap-y-8 md:flex md:flex-wrap md:gap-x-12 md:gap-y-12 justify-between">
               {frontImages.map((project, index) => (
                 <div
                   key={index}

@@ -17,6 +17,12 @@ a::selection {
   color: black;
 }
 
+video {
+  visibility: visible;
+  display: block;
+  opacity: 1;
+}
+
 .div-with-borders {
   position: relative; /* Ensures pseudo-elements position relative to the div */
   z-index: 1; /* Content should stay above pseudo-elements */
@@ -26,7 +32,7 @@ a::selection {
 
 .div-with-borders::before,
 .div-with-borders::after {
-  content: '';
+  content: "";
   position: absolute;
   z-index: 10; /* Position pseudo-elements over the content, so it is on top of the border element */
   pointer-events: none; /* Ensure no interference with user interactions */
@@ -72,7 +78,6 @@ a::selection {
 .div-with-borders > .border-right {
   right: -2px;
 }
-
 
 .arrowCursorRight {
   cursor: e-resize;

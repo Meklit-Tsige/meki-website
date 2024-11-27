@@ -166,7 +166,7 @@ export default function About() {
                 <div className="text-xl md:text-2xl font-bold mb-2 tracking-tighter">
                   MEKLIT FEKADU
                 </div>
-                <div className="w-full md:w-10/12 font-light text-sm">
+                <div className="w-full md:w-10/12 font-light text-base">
                   Nice to meet you ♥ Im Meklit. I am a photographer based in
                   Berlin, Germany. In my advertising photography, I specialize
                   in people and fashion, bringing a free, natural approach to
@@ -190,64 +190,64 @@ export default function About() {
                 <div className="uppercase mb-4 text-xl md:text-2xl tracking-tighter font-bold">
                   Selected Clients
                 </div>
-                <div className="flex flex-wrap gap-4">
-                  <div className="p-[12vw] sm:p-[16vw] md:p-4 div-with-borders flex items-center">
+                <div className="grid grid-cols-2  md:flex md:flex-wrap gap-4">
+                  <div className="p-[12vw] sm:p-[16vw] md:p-4 div-with-borders flex items-center justify-center">
                     <img
                       src="/AALogos/Reebok_International_logo.svg"
                       alt="Logo"
-                      width="75"
+                      width="50"
                     />
                     <div className="border-left"></div>
                     <div className="border-right"></div>
                   </div>
-                  <div className="p-[12vw] sm:p-[16vw] md:p-4 div-with-borders flex items-center">
-                    <img src="/AALogos/Logo_Nike.svg" alt="Logo" width="75" />
+                  <div className="p-[12vw] sm:p-[16vw] md:p-4 div-with-borders flex items-center justify-center">
+                    <img src="/AALogos/Logo_NIKE.svg" alt="Logo" width="50" />
                     <div className="border-left"></div>
                     <div className="border-right"></div>
                   </div>
-                  <div className="p-[12vw] sm:p-[16vw] md:p-4 div-with-borders flex items-center">
-                    <img src="/AALogos/Mytheresa.svg" alt="Logo" width="75" />
+                  <div className="p-[12vw] sm:p-[16vw] md:p-4 div-with-borders flex justify-center items-center">
+                    <img src="/AALogos/Mytheresa.svg" alt="Logo" width="50" />
                     <div className="border-left"></div>
                     <div className="border-right"></div>
                   </div>
-                  <div className="p-[12vw] sm:p-[16vw] md:p-4 div-with-borders flex items-center">
-                    <img src="/AALogos/VOGUE_LOGO.svg" alt="Logo" width="75" />
+                  <div className="p-[12vw] sm:p-[16vw] md:p-4 div-with-borders flex items-center justify-center">
+                    <img src="/AALogos/VOGUE_LOGO.svg" alt="Logo" width="50" />
                     <div className="border-left"></div>
                     <div className="border-right"></div>
                   </div>
-                  <div className="p-[12vw] sm:p-[16vw] md:p-4 py-5 div-with-borders flex items-center">
+                  <div className="p-[12vw] sm:p-[16vw] md:p-4 py-5 div-with-borders flex items-center justify-center">
                     <img
                       src="/AALogos/Telekom_Logo_2013_white.svg"
                       alt="Logo"
-                      width="75"
+                      width="50"
                     />
                     <div className="border-left"></div>
                     <div className="border-right"></div>
                   </div>
-                  <div className="p-[12vw] sm:p-[16vw] md:p-4 div-with-borders flex items-center">
-                    <img src="/AALogos/Puma-logo.svg" alt="Logo" width="75" />
+                  <div className="p-[12vw] sm:p-[16vw] md:p-4 div-with-borders flex items-center justify-center">
+                    <img src="/AALogos/Puma-logo.svg" alt="Logo" width="50" />
                     <div className="border-left"></div>
                     <div className="border-right"></div>
                   </div>
-                  <div className="p-[12vw] sm:p-[16vw] md:p-4 div-with-borders flex items-center">
+                  <div className="p-[12vw] sm:p-[16vw] md:p-4 div-with-borders flex items-center justify-center">
                     <img
                       src="/AALogos/Levi's_logo_(2011).svg"
                       alt="Logo"
-                      width="75"
+                      width="50"
                     />
                     <div className="border-left"></div>
                     <div className="border-right"></div>
                   </div>
-                  <div className="p-[12vw] sm:p-[16vw] md:p-4 div-with-borders flex items-center">
-                    <img src="/AALogos/H&M-Logo.svg" alt="Logo" width="75" />
+                  <div className="p-[12vw] sm:p-[16vw] md:p-4 div-with-borders flex items-center justify-center">
+                    <img src="/AALogos/H&M-Logo.svg" alt="Logo" width="50" />
                     <div className="border-left"></div>
                     <div className="border-right"></div>
                   </div>
-                  <div className="p-[12vw] py-[16vw] sm:p-[16vw] sm:py-[18vw] md:p-4 md:py-7 div-with-borders flex items-center">
+                  <div className="p-[12vw] py-[16vw] sm:p-[16vw] sm:py-[18vw] md:p-4 md:py-7 div-with-borders flex items-center justify-center">
                     <img
                       src="/AALogos/About_You_logo.svg"
                       alt="Logo"
-                      width="75"
+                      width="50"
                     />
                     <div className="border-left"></div>
                     <div className="border-right"></div>
